@@ -107,13 +107,17 @@ int battle(std::string name, int health, int damage, Player& player){
     
     
     if (isPlayerTurn){
-      std::string choice;
-      std::cout << "Would you like to (A)ttack or (H)eal?: ";
+      char choice;
+      std::cout << "Would you like to (A)ttack, (C)heck or (H)eal?: ";
       std::cin >> choice;
 
-      if (choice == "A"){
+      if (choice == 'A'){
         attack("enemy", enemy, player);
         isPlayerTurn = false;
+      }
+      else if (choice == 'C'){
+        std::cout << "Your health: " << player.health << '\n' << "Enemy's health: " << enemy.health << std::endl;
+        continue; 
       }
       else{
         if (player.health < 100){
