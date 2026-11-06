@@ -22,14 +22,15 @@ int main(){
     if (win == 0){
       std::cout << "You won the battle!" << std::endl;
     }
-    else if (choice == 'R'){
-      act1(shinji);
-    }
     else{
       std::cout << "You lost!";
       return 0;
     }
   }
+  else if (choice == 'R'){
+    act1(shinji);
+  }
+
   
   return 0;
 }

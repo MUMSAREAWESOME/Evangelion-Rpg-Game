@@ -1,5 +1,6 @@
 #pragma once
-
+#include <string>
+#include "classes.h"
 
 int attack(std::string target, Enemy& enemy, Player& player);
 
